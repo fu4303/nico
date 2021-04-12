@@ -10,7 +10,7 @@ import type { GitHubRepository } from '../lib/types';
 
 export async function getStaticProps() {
     const GitHubRepositoriesResponse = await fetch(
-        'https://api.github.com/users/nico-bachner/repos'
+        'https://api.github.com/users/fu4303/repos'
     );
     const GitHubRepositories = await GitHubRepositoriesResponse.json();
     const repositories = await GitHubRepositories.filter(
@@ -43,7 +43,7 @@ export default function Repositories(props: Props) {
                     Here are all {props.repositories.length} of my public GitHub
                     repositories. Obviously, they can all be found on{' '}
                     <Link
-                        href="https://github.com/nico-bachner?tab=repositories"
+                        href="https://github.com/fu4303?tab=repositories"
                         className="text-azure hover:underline"
                     >
                         GitHub
